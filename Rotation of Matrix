@@ -1,0 +1,14 @@
+for a in range(int(input())):
+    print('Test Case #{}:'.format(a+1))
+    n=int(input())
+    m=[list(map(int,input().split())) for i in range(n)]
+    transpose=[]
+    for i in range(n):
+        a=[]
+        for j in range(n):
+            a.append(m[j][i])
+        transpose.append(a[-1::-1])
+    for i in transpose:
+        for j in i:
+            print(j,end=' ')
+        print()    
