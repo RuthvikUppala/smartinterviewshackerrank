@@ -1,0 +1,17 @@
+q=int(input())
+for i in range(q):
+    A=[]
+    B=[]
+    u, v=map(int,input().split())
+    for i in range(u):
+        A.append(list(map(int,input().split())))
+    w, x=map(int,input().split())
+    for i in range(w):
+        B.append(list(map(int,input().split())))
+    C=[[0 for i in range(x)] for j in range(u)]
+    for i in range(u):
+        for j in range(x):
+            for k in range(w):
+                C[i][j] +=A[i][k] * B[k][j]
+            print(C[i][j],end=" ")
+        print()    
