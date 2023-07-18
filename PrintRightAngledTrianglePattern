@@ -1,0 +1,8 @@
+a=int(input())
+for i in range(a):
+    x=int(input())
+    print("Case #",end="")
+    print(i+1,end="")
+    print(':')
+    for j in range(x):
+        print(" "*(x-1-j)+"*"*(j+1))
