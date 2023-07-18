@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+long fun(long a, long b)
+{
+    if(b==0)
+        return a;
+    return fun(b, a%b);
+}
+
+
+int main()
+{
+    int t;
+    scanf("%d",&t);
+    for(int j=0;j<t;j++)
+    {
+        long a,b;
+        long h,l;
+        scanf("%ld %ld",&a,&b);
+        h=fun(a,b);
+        l=(a*b)/h;
+        printf("%ld %ld",l,h);
+        printf("\n");
+        
+    }
+    return 0;
+}
