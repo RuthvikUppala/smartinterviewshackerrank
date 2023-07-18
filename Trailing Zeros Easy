@@ -1,0 +1,12 @@
+def tz(n):
+    if(n<0):
+        return -1
+    cnt=0
+    while(n>=5):
+        n//=5
+        cnt +=n
+        
+    return cnt
+for i in range(int(input())):
+    n=int(input())
+    print(tz(n))
