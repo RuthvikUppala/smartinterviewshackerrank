@@ -1,0 +1,53 @@
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner spi=new Scanner(System.in);
+        int asd=spi.nextInt();
+        for(int ii=0;ii<asd;ii++)
+        {
+            int a=spi.nextInt();
+            int aa[][]=new int [a][a];
+            for(int i=0;i<a;i++)
+            {
+                for(int j=0;j<a;j++)
+                {
+                    aa[i][j]=spi.nextInt();
+                }
+            }
+            int b=a;
+            int h=0;
+            int g=a-1;
+           while(b>0)
+           {
+               for(int i=h;i<=g;i++)
+               {
+                   System.out.print(aa[h][i]+" ");
+               }
+               for(int i=h+1;i<=g;i++)
+               {
+                   System.out.print(aa[i][g]+" ");
+               }
+               for(int i=g-1;i>=h;i--)
+               {
+                   System.out.print(aa[g][i]+" ");
+               }
+               for(int i=g-1;i>h;i--)
+               {
+                   System.out.print(aa[i][h]+" ");
+               }
+               h++;
+               g--;
+               b--;
+           }
+           
+            System.out.println();
+        }
+    }
+}
